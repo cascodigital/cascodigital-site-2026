@@ -1,11 +1,18 @@
+<div align="center">
+
 # Casco Digital — Site 2026
 
-![Status](https://img.shields.io/badge/Status-Active-brightgreen)
-![License](https://img.shields.io/badge/License-MIT-blue)
-![Author](https://img.shields.io/badge/Author-Casco%20Digital-orange)
+**Institutional website for Casco Digital, built for Cloudflare Pages.**
 
+![Status](https://img.shields.io/badge/Status-Active-16A34A?style=flat-square)
+![License](https://img.shields.io/badge/License-MIT-2563EB?style=flat-square)
+![Casco Digital](https://img.shields.io/badge/Casco-Digital-111827?style=flat-square)
 ![Cloudflare](https://img.shields.io/badge/Cloudflare-Pages-F38020?style=flat-square&logo=cloudflare&logoColor=white)
 ![HTML5](https://img.shields.io/badge/HTML5-CSS3-E34F26?style=flat-square&logo=html5&logoColor=white)
+
+</div>
+
+---
 
 Redesign 2026 do site institucional da Casco Digital. Estética technical brutalism com imagens WebP otimizadas, versão mobile dedicada e Cloudflare Worker integrado.
 
