@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Central de Suporte — Casco Digital</title>
+<meta name="description" content="Baixe o agente de atendimento remoto da Casco Digital e receba suporte técnico na hora. Sem instalação, sem cadastro.">
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#0B0B0B">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" as="font" href="assets/fonts/Inter.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="assets/fonts/Rajdhani-SemiBold.woff2" type="font/woff2" crossorigin>
+
+<style>
+  @font-face { font-family:'Inter'; src:url('assets/fonts/Inter.woff2') format('woff2-variations'); font-weight:100 900; font-display:swap; }
+  @font-face { font-family:'Rajdhani'; src:url('assets/fonts/Rajdhani-SemiBold.woff2') format('woff2'); font-weight:600 700; font-display:swap; }
+  @font-face { font-family:'FiraCode'; src:url('assets/fonts/FiraCode.woff2') format('woff2'); font-weight:400; font-display:swap; }
+
+  :root {
+    --bg:        #0B0B0B;
+    --paper:     #F2EFE8;
+    --ink:       #0B0B0B;
+    --ink-60:    rgba(11,11,11,.62);
+    --ink-40:    rgba(11,11,11,.40);
+    --line:      #0B0B0B;
+    --line-soft: rgba(11,11,11,.10);
+    --cyan:      #00D9FF;
+    --cyan-ink:  #005a6e;
+    --f-display:'Rajdhani', 'Arial Narrow', sans-serif;
+    --f-sans:   'Inter', system-ui, sans-serif;
+    --f-mono:   'FiraCode', ui-monospace, monospace;
+    --ease: cubic-bezier(.2,.7,.2,1);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--paper); color: var(--ink); font-family: var(--f-sans); font-size: 16px; line-height: 1.5; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  body::before { content:""; position:fixed; inset:0; pointer-events:none; z-index:1; opacity:.5; background-image: radial-gradient(rgba(11,11,11,.06) 1px, transparent 1px); background-size: 3px 3px; mix-blend-mode: multiply; }
+  a { color: inherit; text-decoration: none; }
+  ::selection { background: var(--cyan); color: var(--ink); }
+
+  .wrap { position: relative; z-index: 2; max-width: 1080px; margin: 0 auto; padding: 0 40px; }
+
+  /* ── topo ───────────────────────────────────────── */
+  header.top { border-bottom: 1px solid var(--line); }
+  header.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-top: 22px; padding-bottom: 22px; }
+  .brand { display: flex; align-items: center; gap: 14px; }
+  .brand .logo { width: 46px; height: 46px; border-radius: 50%; background: url('assets/redondo.webp') center/cover; border: 1px solid var(--ink); flex-shrink: 0; }
+  .brand b { font-family: var(--f-display); font-weight: 700; font-size: 19px; letter-spacing: .02em; display: block; line-height: 1; }
+  .brand small { font-family: var(--f-mono); font-size: 10px; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-60); }
+  .top-link { font-family: var(--f-mono); font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-60); border-bottom: 1px solid var(--ink-40); padding-bottom: 3px; transition: all .2s var(--ease); }
+  .top-link:hover { color: var(--ink); border-color: var(--ink); }
+
+  /* ── hero / download ────────────────────────────── */
+  .hero { padding: 72px 0 64px; border-bottom: 1px solid var(--line); }
+  .kicker { font-family: var(--f-mono); font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-60); padding-top: 14px; border-top: 2px solid var(--ink); display: inline-block; margin-bottom: 28px; }
+  h1 { font-family: var(--f-display); font-weight: 700; font-size: clamp(2.6rem, 9vw, 6rem); line-height: .9; letter-spacing: -0.03em; text-transform: uppercase; }
+  h1 .u { color: var(--cyan-ink); position: relative; display: inline-block; }
+  h1 .u::after { content:""; position:absolute; left:0; right:0; bottom:6%; height:12%; background: var(--cyan); z-index:-1; }
+  .lead { margin-top: 24px; max-width: 54ch; font-size: 1.08rem; color: var(--ink-60); }
+  .lead b { color: var(--ink); font-weight: 600; }
+
+  .dl-box { margin-top: 44px; border: 1px solid var(--ink); background: var(--bg); color: var(--paper); padding: 36px; display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: center; position: relative; }
+  .dl-box::before { content:""; position:absolute; inset:-1px; border:1px solid var(--ink); outline: 4px solid var(--paper); outline-offset: 2px; pointer-events:none; }
+  .dl-box h2 { font-family: var(--f-display); font-weight: 600; font-size: 1.7rem; text-transform: uppercase; letter-spacing: -0.01em; margin-bottom: 8px; }
+  .dl-box p { color: rgba(242,239,232,.7); font-size: .97rem; max-width: 48ch; }
+  .dl-meta { margin-top: 16px; display: flex; gap: 10px; flex-wrap: wrap; }
+  .dl-meta span { font-family: var(--f-mono); font-size: 10px; letter-spacing: .1em; padding: 4px 9px; border: 1px solid rgba(242,239,232,.25); color: rgba(242,239,232,.75); }
+  .dl-btn { display: inline-flex; align-items: center; gap: 14px; padding: 26px 34px; background: var(--cyan); color: var(--ink); border: 1px solid var(--cyan); font-family: var(--f-display); font-weight: 700; font-size: 1.5rem; text-transform: uppercase; letter-spacing: .02em; white-space: nowrap; transition: all .2s var(--ease); }
+  .dl-btn svg { width: 30px; height: 30px; flex-shrink: 0; }
+  .dl-btn:hover { background: var(--paper); border-color: var(--paper); transform: translateY(-2px); }
+  .dl-btn:focus-visible { outline: 3px solid var(--paper); outline-offset: 3px; }
+
+  /* ── passos ─────────────────────────────────────── */
+  .sec { padding: 72px 0; border-bottom: 1px solid var(--line); }
+  .sec-num { font-family: var(--f-mono); font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-60); padding-top: 14px; border-top: 2px solid var(--ink); display: inline-block; margin-bottom: 20px; }
+  h2.sec-title { font-family: var(--f-display); font-weight: 600; font-size: clamp(1.9rem, 5vw, 3rem); line-height: 1; letter-spacing: -0.02em; text-transform: uppercase; margin-bottom: 44px; }
+  h2.sec-title .u { text-decoration: underline; text-decoration-color: var(--cyan); text-decoration-thickness: 6px; text-underline-offset: 4px; }
+
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); }
+  .step { padding: 32px 26px 32px 0; border-right: 1px solid var(--ink); }
+  .step:last-child { border-right: 0; padding-right: 0; }
+  .step:not(:first-child) { padding-left: 26px; }
+  .step .n { font-family: var(--f-mono); font-size: 11px; letter-spacing: .2em; color: var(--ink-60); margin-bottom: 40px; display: flex; justify-content: space-between; }
+  .step .n::after { content: "◼"; color: var(--cyan-ink); }
+  .step h3 { font-family: var(--f-display); font-weight: 600; font-size: 1.5rem; line-height: 1.05; text-transform: uppercase; margin-bottom: 12px; }
+  .step p { color: var(--ink-60); font-size: .96rem; }
+
+  .note { margin-top: 36px; border: 1px solid var(--ink); padding: 22px 24px; display: grid; grid-template-columns: auto 1fr; gap: 18px; align-items: start; background: rgba(0,217,255,.07); }
+  .note .bang { font-family: var(--f-display); font-weight: 700; font-size: 1.6rem; line-height: 1; color: var(--cyan-ink); }
+  .note p { font-size: .96rem; color: var(--ink); }
+  .note b { font-weight: 600; }
+
+  /* ── contato ────────────────────────────────────── */
+  .contact { background: var(--bg); color: var(--paper); padding: 72px 0; }
+  .contact .sec-num { color: rgba(242,239,232,.6); border-color: var(--paper); }
+  .contact h2.sec-title { color: var(--paper); }
+  .rows { border-top: 1px solid rgba(242,239,232,.2); }
+  .rows .row { display: grid; grid-template-columns: 150px 1fr; gap: 16px; align-items: center; padding: 22px 0; border-bottom: 1px solid rgba(242,239,232,.14); }
+  .rows .k { font-family: var(--f-mono); font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: rgba(242,239,232,.5); }
+  .rows .v { font-family: var(--f-display); font-size: 1.35rem; }
+  .rows .v a:hover { color: var(--cyan); }
+  .actions { margin-top: 36px; display: flex; gap: 12px; flex-wrap: wrap; }
+  .action { display: inline-flex; align-items: center; gap: 10px; padding: 14px 22px; font-family: var(--f-sans); font-size: 14px; font-weight: 600; border: 1px solid var(--cyan); background: var(--cyan); color: var(--ink); transition: all .2s var(--ease); }
+  .action.ghost { background: transparent; color: var(--paper); border-color: var(--paper); }
+  .action:hover { background: var(--paper); color: var(--ink); border-color: var(--paper); }
+  .action.ghost:hover { background: var(--paper); color: var(--ink); }
+  .action .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--ink); }
+
+  footer.colophon { background: var(--bg); color: rgba(242,239,232,.5); border-top: 1px solid rgba(242,239,232,.15); font-family: var(--f-mono); font-size: 11px; letter-spacing: .1em; }
+  footer.colophon .wrap { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; padding-top: 26px; padding-bottom: 26px; }
+  footer.colophon a:hover { color: var(--cyan); }
+
+  .wa { position: fixed; right: 24px; bottom: 24px; z-index: 50; width: 54px; height: 54px; display: grid; place-items: center; background: var(--ink); color: var(--cyan); border: 1px solid var(--ink); transition: all .2s var(--ease); }
+  .wa:hover { background: var(--cyan); color: var(--ink); }
+  .wa svg { width: 24px; height: 24px; }
+  .wa::after { content:""; position:absolute; inset: 4px -4px -4px 4px; border: 1px solid var(--ink); background: var(--paper); z-index:-1; }
+
+  @media (max-width: 900px) {
+    .wrap { padding: 0 24px; }
+    .dl-box { grid-template-columns: 1fr; gap: 26px; padding: 28px; }
+    .dl-btn { justify-content: center; font-size: 1.25rem; padding: 22px 26px; }
+    .steps { grid-template-columns: 1fr; }
+    .step { border-right: 0; border-bottom: 1px solid var(--ink); padding: 26px 0 !important; }
+    .step:last-child { border-bottom: 0; }
+    .step .n { margin-bottom: 20px; }
+    .rows .row { grid-template-columns: 1fr; gap: 6px; }
+    .hero { padding: 48px 0 48px; }
+    .sec, .contact { padding: 56px 0; }
+    .brand b { white-space: nowrap; font-size: 17px; }
+    .brand small { white-space: nowrap; }
+    .top-link { display: none; }
+    footer.colophon .wrap { justify-content: center; text-align: center; gap: 10px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <div class="logo"></div>
+      <div>
+        <b>CASCO DIGITAL</b>
+        <small>Central de Suporte</small>
+      </div>
+    </div>
+    <a class="top-link" href="https://cascodigital.com.br" rel="noopener">cascodigital.com.br ↗</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <span class="kicker">Atendimento remoto</span>
+      <h1>Baixe,<br>execute,<br><span class="u">pronto.</span></h1>
+      <p class="lead">
+        <b>Não precisa instalar nada.</b> O agente abre direto, mostra um número e uma senha
+        temporária, e é só passar os dois para o técnico. Ao fechar o programa, o acesso acaba.
+      </p>
+
+      <div class="dl-box">
+        <div>
+          <h2>Agente de suporte</h2>
+          <p>Para Windows. Rode o arquivo baixado e deixe a janela aberta durante o atendimento.</p>
+          <div class="dl-meta">
+            <span>WINDOWS</span><span>35 MB</span><span>SEM INSTALAÇÃO</span><span>SEM CADASTRO</span>
+          </div>
+        </div>
+        <a class="dl-btn" href="suporte_casco.exe" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 11l5 5 5-5"/><path d="M4 20h16"/></svg>
+          Baixar agente
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <span class="sec-num">§01 — Como funciona</span>
+      <h2 class="sec-title">Três passos.<br><span class="u">Um minuto.</span></h2>
+
+      <div class="steps">
+        <div class="step">
+          <div class="n"><span>P.01 / DOWNLOAD</span></div>
+          <h3>Baixe o agente</h3>
+          <p>Clique no botão acima. O Windows pode avisar que é um arquivo baixado da internet — pode manter o download.</p>
+        </div>
+        <div class="step">
+          <div class="n"><span>P.02 / EXECUTE</span></div>
+          <h3>Abra o arquivo</h3>
+          <p>Dê dois cliques em <code>suporte_casco.exe</code>. Nada é instalado: a janela abre e mostra um <b>ID</b> e uma <b>senha</b>.</p>
+        </div>
+        <div class="step">
+          <div class="n"><span>P.03 / CONECTE</span></div>
+          <h3>Passe os dados</h3>
+          <p>Informe o ID e a senha ao técnico pelo WhatsApp ou telefone. Você acompanha tudo o que é feito na sua tela.</p>
+        </div>
+      </div>
+
+      <div class="note">
+        <div class="bang">!</div>
+        <p>
+          <b>Só execute este programa durante um atendimento combinado com a Casco Digital.</b>
+          A senha muda a cada vez que o agente é aberto e o acesso termina quando você fecha a janela.
+          Ninguém consegue se conectar sem os dados que aparecem na sua tela.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="wrap">
+      <span class="sec-num">§02 — Fale com a gente</span>
+      <h2 class="sec-title">Precisa de<br><span class="u">ajuda agora?</span></h2>
+
+      <div class="rows">
+        <div class="row"><div class="k">WhatsApp</div><div class="v"><a href="https://wa.me/5551992413388" target="_blank" rel="noopener">(51) 99241-3388</a></div></div>
+        <div class="row"><div class="k">Email</div><div class="v"><a href="mailto:contato@cascodigital.com.br">contato@cascodigital.com.br</a></div></div>
+        <div class="row"><div class="k">Atendimento</div><div class="v">Porto Alegre · RS — remoto para todo o país</div></div>
+      </div>
+
+      <div class="actions">
+        <a class="action" href="https://wa.me/5551992413388?text=Ol%C3%A1%20Casco%20Digital%2C%20preciso%20de%20suporte%20remoto" target="_blank" rel="noopener">
+          <span class="dot"></span> Chamar no WhatsApp
+        </a>
+        <a class="action ghost" href="https://cascodigital.com.br/diagnostico.html" target="_blank" rel="noopener">Diagnóstico gratuito →</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="colophon">
+  <div class="wrap">
+    <div>© 2026 · Casco Digital Informática</div>
+    <div><a href="https://cascodigital.com.br" rel="noopener">cascodigital.com.br</a></div>
+    <div>Porto Alegre · Brasil</div>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/5551992413388?text=Ol%C3%A1%20Casco%20Digital%2C%20preciso%20de%20suporte%20remoto" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 14.3c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.4.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1.1 1-1.1 2.5s1.1 2.9 1.3 3.1c.2.2 2.2 3.3 5.3 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.1-1.3c1.4.8 3.1 1.2 4.9 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.2-.4-4.5-1.2l-.3-.2-3 .8.8-2.9-.2-.3c-.9-1.4-1.3-3-1.3-4.6 0-4.6 3.7-8.3 8.3-8.3 4.6 0 8.3 3.7 8.3 8.3s-3.5 8.4-8.1 8.4z"/></svg>
+</a>
+
+</body>
+</html>

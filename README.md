@@ -2,11 +2,9 @@
 
 # Casco Digital — Site 2026
 
-**Institutional website for Casco Digital, built for Cloudflare Pages.**
+**Site institucional e Central de Suporte da Casco Digital.**
 
 ![Status](https://img.shields.io/badge/Status-Active-16A34A?style=flat-square)
-![License](https://img.shields.io/badge/License-MIT-2563EB?style=flat-square)
-![Casco Digital](https://img.shields.io/badge/Casco-Digital-111827?style=flat-square)
 ![Cloudflare](https://img.shields.io/badge/Cloudflare-Pages-F38020?style=flat-square&logo=cloudflare&logoColor=white)
 ![HTML5](https://img.shields.io/badge/HTML5-CSS3-E34F26?style=flat-square&logo=html5&logoColor=white)
 
@@ -14,42 +12,65 @@
 
 ---
 
-Redesign 2026 do site institucional da Casco Digital. Estética technical brutalism com imagens WebP otimizadas, versão mobile dedicada e Cloudflare Worker integrado.
+Estetica technical brutalism, paginas unicas responsivas, imagens WebP e fontes woff2
+subsetadas. Duas entregas, **hospedagens diferentes**:
 
-**Producao:** [cascodigital.com.br](https://cascodigital.com.br)
+| Pasta | Vai para | Como publica |
+|---|---|---|
+| `site/` | `cascodigital.com.br` | Cloudflare Pages, projeto `site-casco-digital` |
+| `suporte/` | `suporte.cascodigital.com.br` | container `suporte-remoto-web` no servidor `.46` |
 
 ## Estrutura
 
 ```
 cascodigital-site-2026/
-├── index.html              # Pagina principal (desktop)
-├── mobile/
-│   └── index.html          # Versao mobile dedicada
-├── diagnostico.html        # The Lab — diagnostico de hardware
-├── assets/
-│   ├── fonts/              # Exo2, FiraCode, Inter, Rajdhani
-│   ├── turtle-hero.webp    # Imagens otimizadas em WebP
-│   └── redondo.webp
-├── _worker.js              # Cloudflare Worker
-└── README.md
+├── site/
+│   ├── index.html          # Pagina unica, responsiva (desktop + mobile)
+│   ├── diagnostico.html    # Guardian (SPF/DMARC) + PC Inspector
+│   ├── 404.html
+│   ├── robots.txt / sitemap.xml
+│   ├── favicon.ico / apple-touch-icon.png
+│   └── assets/             # fontes woff2, imagens WebP, og-image
+└── suporte/
+    ├── index.html          # Central de Suporte: download do agente remoto
+    ├── favicon.ico / apple-touch-icon.png
+    └── assets/
 ```
+
+O agente de atendimento remoto (`suporte_casco.exe`, ~37 MB, TeamViewer QuickSupport
+customizado) **nao e versionado** — ele e gerado no painel do TeamViewer e vive em
+`/dados/dockers/suporte/` no `.46`.
 
 ## Deploy
 
-### Cloudflare Pages
+### site/ — Cloudflare Pages
 
-1. Conecte este repositorio em **Cloudflare Pages** > **Create a project** > **Connect to Git**
-2. Configuracao de build:
-   - Framework preset: **None**
-   - Build command: (vazio)
-   - Build output directory: `/`
+O projeto **nao builda a partir do Git**: a publicacao e sempre por `wrangler`.
 
-## Diferencas em relacao ao site anterior
+```bash
+source ~/.secrets/cloudflare.env
+CLOUDFLARE_API_TOKEN=$CF_TOKEN_PAGES CLOUDFLARE_ACCOUNT_ID=$CF_ACCOUNT_ID \
+  npx wrangler pages deploy site --project-name=site-casco-digital
+```
 
-- Imagens convertidas para **WebP** (reducao de ~60% no tamanho)
-- Versao mobile como pagina dedicada (`/mobile`)
-- Cloudflare Worker para logica server-side
-- Estetica technical brutalism (tipografia, grid, contrastes)
+Exige Node >= 22. O dominio chega ao Pages por CNAME (`cascodigital.com.br` e `www` →
+`site-casco-digital.pages.dev`).
+
+### suporte/ — servidor .46
+
+```bash
+rsync -a --chmod=F644 suporte/ h46:/dados/dockers/suporte/
+```
+
+O nginx do container le como outro usuario: arquivo com modo `700` responde **403 na
+origem**. Por isso o `--chmod=F644`.
+
+## Notas de producao
+
+- Sem `404.html`, o Pages responde **200 com a home** em qualquer rota errada (soft 404).
+- `/pagina.html` responde **308** para a URL limpa `/pagina` — links internos, `canonical`
+  e `sitemap.xml` usam a forma sem `.html`.
+- Fontes: 1,73 MB de TTF viraram 105 KB de woff2 subsetado (latin), via `pyftsubset`.
 
 ---
 

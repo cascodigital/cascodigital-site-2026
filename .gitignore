@@ -1,0 +1,6 @@
+# O agente de atendimento remoto nao e versionado aqui: sao 37 MB de binario
+# gerado no painel do TeamViewer. Ele vive em /dados/dockers/suporte/ no .46.
+suporte/suporte_casco.exe
+*.exe
+.wrangler/
+node_modules/
