@@ -2,9 +2,16 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PDG8MNZW');</script>
+<!-- End Google Tag Manager -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Casco Digital — Consultoria M365, Entra ID e Infraestrutura · Porto Alegre</title>
-<meta name="description" content="Consultoria em Microsoft 365, Entra ID, automação PowerShell e infraestrutura. Projetos e operação contínua para empresas que precisam de um ambiente Microsoft estável. Porto Alegre, RS.">
+<title>Migração de e-mail e arquivos para o Microsoft 365 · Casco Digital</title>
+<meta name="description" content="Migração de e-mail e arquivos para o Microsoft 365 (Exchange, SharePoint e OneDrive) para escritórios e pequenas empresas, sem perder histórico e sem parar o trabalho. Virada fora do horário comercial e preço fechado. Porto Alegre, atendimento remoto.">
 <meta name="author" content="Casco Digital Informática">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#0B0B0B">
@@ -14,15 +21,15 @@
 <meta property="og:site_name" content="Casco Digital">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:url" content="https://cascodigital.com.br/">
-<meta property="og:title" content="Casco Digital — Consultoria M365, Entra ID e Infraestrutura">
-<meta property="og:description" content="M365, identidade, automação PowerShell e infraestrutura. Projetos e operação contínua para empresas que precisam de um ambiente Microsoft que só funciona.">
+<meta property="og:title" content="Migração para Microsoft 365 — Casco Digital">
+<meta property="og:description" content="E-mail e arquivos do escritório no Microsoft 365, sem perder histórico e sem parar o trabalho.">
 <meta property="og:image" content="https://cascodigital.com.br/assets/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Casco Digital — consultoria em M365 e infraestrutura">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Casco Digital — Consultoria M365, Entra ID e Infraestrutura">
-<meta name="twitter:description" content="M365, identidade, automação PowerShell e infraestrutura. Porto Alegre, RS.">
+<meta name="twitter:title" content="Migração para Microsoft 365 — Casco Digital">
+<meta name="twitter:description" content="Migração de e-mail para o Microsoft 365 para escritórios e pequenas empresas.">
 <meta name="twitter:image" content="https://cascodigital.com.br/assets/og-image.jpg">
 
 <link rel="icon" href="favicon.ico" sizes="any">
@@ -37,7 +44,7 @@
   "@type": "ProfessionalService",
   "@id": "https://cascodigital.com.br/#business",
   "name": "Casco Digital Informática",
-  "description": "Consultoria em Microsoft 365, Entra ID, automação PowerShell e infraestrutura corporativa.",
+  "description": "Migração de e-mail e arquivos para o Microsoft 365 para escritórios e pequenas empresas.",
   "url": "https://cascodigital.com.br/",
   "logo": "https://cascodigital.com.br/apple-touch-icon.png",
   "image": "https://cascodigital.com.br/assets/og-image.jpg",
@@ -145,13 +152,14 @@
   .hero-portrait .ticks { position: absolute; top: 8px; left: 8px; right: 8px; display: flex; justify-content: space-between; font-family: var(--f-mono); font-size: 9px; color: var(--paper); opacity: .85; letter-spacing: .1em; z-index: 3; }
   .hero-type { position: relative; z-index: 1; }
   @media (max-width: 1500px) { .hero-portrait { display: none; } }
+  @media (min-width: 1501px) { .hero-type { padding-right: calc(clamp(240px, 26vw, 360px) + 40px); } }
   .hero-meta { display: flex; justify-content: space-between; align-items: flex-start; font-family: var(--f-mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-60); }
   .hero-meta .l { display: flex; gap: 28px; flex-wrap: wrap; }
   .hero-meta .l span::before { content: "//"; color: var(--cyan-ink); margin-right: 6px; }
   .hero-meta .r { text-align: right; line-height: 1.7; }
   .hero-meta .r b { color: var(--ink); font-weight: 600; }
-  .hero-type { align-self: center; font-family: var(--f-display); font-weight: 700; font-size: clamp(3rem, 11vw, 10.5rem); line-height: .88; letter-spacing: -0.035em; text-transform: uppercase; }
-  .hero-type .row { display: block; overflow: hidden; }
+  .hero-type { align-self: center; font-family: var(--f-display); font-weight: 700; font-size: clamp(3rem, 9.5vw, 9rem); line-height: .88; letter-spacing: -0.035em; text-transform: uppercase; }
+  .hero-type .row { display: block; overflow: hidden; padding-top: .12em; margin-top: -.12em; }
   .hero-type .cyan-mark { color: var(--cyan-ink); position: relative; display: inline-block; }
   .hero-type .cyan-mark::after { content: ""; position: absolute; left: 0; right: 0; bottom: 6%; height: 12%; background: var(--cyan); z-index: -1; }
   .hero-type em { font-style: italic; font-family: var(--f-sans); font-weight: 300; font-size: .34em; letter-spacing: 0; text-transform: none; color: var(--ink-60); vertical-align: middle; margin-left: .2em; }
@@ -201,9 +209,9 @@
   .spec-row p { font-size: .94rem; color: var(--ink-60); max-width: 50ch; }
 
   .services-table { border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); }
-  .srv-row { display: grid; grid-template-columns: 80px 1.1fr 2.5fr 120px; gap: 24px; align-items: center; padding: 24px 0; border-bottom: 1px solid var(--line-soft); transition: background .2s var(--ease); cursor: default; position: relative; }
+  .srv-row { display: grid; grid-template-columns: 80px 1.1fr 2.5fr 120px; gap: 24px; align-items: center; padding: 24px 16px; border-bottom: 1px solid var(--line-soft); transition: background .2s var(--ease); cursor: default; position: relative; }
   .srv-row:last-child { border-bottom: 0; }
-  .srv-row:hover { background: var(--ink); color: var(--paper); padding-left: 16px; padding-right: 16px; }
+  .srv-row:hover { background: var(--ink); color: var(--paper); }
   .srv-row:hover .srv-num { color: var(--cyan); }
   .srv-row:hover .srv-desc { color: var(--paper); opacity: .8; }
   .srv-row:hover .srv-arrow { color: var(--cyan); transform: translateX(4px); }
@@ -285,6 +293,9 @@
   }
   @media (max-width: 820px) {
     .frame { grid-template-columns: 1fr; }
+    .info-list .row { grid-template-columns: 1fr auto; gap: 6px 12px; }
+    .info-list .k { grid-column: 1 / -1; }
+    .info-list .v { font-size: 1.1rem; min-width: 0; overflow-wrap: anywhere; }
     aside.rail { position: static; height: auto; border-right: 0; border-bottom: 1px solid var(--ink); padding: 20px; }
     .mobile-topbar { display: flex; justify-content: space-between; align-items: center; }
     .rail .top { border-bottom: 0; padding-bottom: 0; }
@@ -348,8 +359,13 @@
     * { transition-duration: .01ms !important; }
   }
 </style>
+<script src="/assets/track.js"></script>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PDG8MNZW"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <div class="frame">
   <aside class="rail" id="rail">
@@ -372,7 +388,7 @@
       <div>
         <h5>Ferramentas</h5>
         <div class="tools">
-          <a class="tool primary" href="https://suporte.cascodigital.com.br/suporte_casco.exe" download>
+          <a class="tool primary" data-cta="menu" href="https://suporte.cascodigital.com.br/suporte_casco.exe" download>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 11l5 5 5-5"/><path d="M4 20h16"/></svg>
             Baixar agente<span class="arrow">↓</span>
           </a>
@@ -391,10 +407,10 @@
         <h5>Índice</h5>
         <nav class="main">
           <a href="#home"><span class="n">00</span><span>Home</span><span class="mark"></span></a>
-          <a href="#pillars"><span class="n">01</span><span>Pilares</span><span class="mark"></span></a>
-          <a href="#about"><span class="n">02</span><span>Sobre</span><span class="mark"></span></a>
-          <a href="#services"><span class="n">03</span><span>Serviços</span><span class="mark"></span></a>
-          <a href="#stack"><span class="n">04</span><span>Stack</span><span class="mark"></span></a>
+          <a href="#pillars"><span class="n">01</span><span>O que muda</span><span class="mark"></span></a>
+          <a href="#about"><span class="n">02</span><span>Como funciona</span><span class="mark"></span></a>
+          <a href="#services"><span class="n">03</span><span>O que inclui</span><span class="mark"></span></a>
+          <a href="#stack"><span class="n">04</span><span>Perguntas</span><span class="mark"></span></a>
           <a href="#contact"><span class="n">05</span><span>Contato</span><span class="mark"></span></a>
         </nav>
       </div>
@@ -411,11 +427,11 @@
     <section class="hero" id="home">
       <div class="hero-meta">
         <div class="l">
-          <span>M365</span><span>Entra ID</span><span>PowerShell</span><span>Azure</span>
+          <span>E-mail</span><span>SharePoint</span><span>OneDrive</span>
         </div>
         <div class="r">
-          <b>Edição 2026 · Vol. 02</b><br>
-          Consultoria especializada<br>
+          <b>Migração · projeto fechado</b><br>
+          Escritórios e pequenas empresas<br>
           desde 2025
         </div>
       </div>
@@ -424,142 +440,134 @@
       <div class="hero-portrait" aria-hidden="true">
         <div class="ticks"><span>PRT-01</span><span>v.2026</span></div>
         <img src="assets/turtle-hero2.webp" alt="" loading="eager">
-        <div class="tag"><span>// MIMI</span><b>BUSY ●</b></div>
+        <div class="tag"><span>// MIMI</span><b>MIGRANDO ●</b></div>
       </div>
       <h1 class="hero-type">
-        <span class="row">Infra<em>— [01]</em></span>
-        <span class="row"><span class="cyan-mark">estrutura</span></span>
-        <span class="row">de ponta</span>
+        <span class="row">E-mail e<em>— [365]</em></span>
+        <span class="row">arquivos</span>
+        <span class="row">no <span class="cyan-mark">365</span></span>
         <span class="row" style="font-size: .52em; font-family: var(--f-sans); font-weight: 300; text-transform: none; letter-spacing: -0.015em; color: var(--ink-60); margin-top: 18px;">
-          sem <span style="color: var(--ink); font-weight: 600; font-family: var(--f-display); text-transform: uppercase; letter-spacing: 0;">complexidade</span> desnecessária.
+          sem <span style="color: var(--ink); font-weight: 600; font-family: var(--f-display); text-transform: uppercase; letter-spacing: 0;">parar</span> o escritório.
         </span>
       </h1>
       </div>
 
       <div class="hero-bottom">
         <p class="lead">
-          <b>M365, identidade, automação e infraestrutura.</b> Projetos e operação contínua para times que precisam de um ambiente Microsoft que só funciona — sem chamados recorrentes, sem workaround.
+          <b>O e-mail sai da hospedagem e os arquivos saem do servidor, do pendrive e do computador de cada um. Tudo no Microsoft 365, com histórico, abrindo de qualquer lugar.</b> A virada acontece à noite ou no fim de semana, com preço fechado antes de começar.
         </p>
-        <a class="action" href="https://wa.me/5551992413388?text=Ol%C3%A1%20Casco%20Digital%2C%20gostaria%20de%20uma%20consulta" target="_blank" rel="noopener">
-          <span class="dot"></span> Solicitar consulta
+        <a class="action" data-cta="hero" href="https://wa.me/5551992413388?text=Ol%C3%A1%20Casco%20Digital%2C%20quero%20migrar%20o%20e-mail%20para%20o%20Microsoft%20365" target="_blank" rel="noopener">
+          <span class="dot"></span> Pedir orçamento
         </a>
-        <a class="action ghost" href="#services">Ver serviços →</a>
+        <a class="action ghost" href="#about">Como funciona →</a>
       </div>
 
-      <div class="hero-num">№ 001 / PORTO ALEGRE · RS</div>
+      <div class="hero-num">№ 001 / PORTO ALEGRE · RS · ATENDIMENTO REMOTO</div>
     </section>
 
     <section class="sec" id="pillars">
       <div class="sec-head rv">
-        <div class="sec-num">§01 — Pilares</div>
+        <div class="sec-num">§01 — O que muda</div>
         <div>
-          <h2>Três frentes.<br><span class="u">Uma prática.</span></h2>
-          <p class="sec-lead">Não fazemos de tudo. Fazemos o que sabemos fazer bem feito — identidade, automação e infraestrutura em torno do ecossistema Microsoft.</p>
+          <h2>E-mail,<br>arquivos.<br><span class="u">Um lugar só.</span></h2>
+          <p class="sec-lead">Quase todo escritório pequeno tem o e-mail num lugar e os arquivos espalhados em outros. O levantamento inicial mostra o que dá para levar e em que ordem.</p>
         </div>
       </div>
       <div class="pillars rv">
         <article class="pillar">
-          <div class="idx">P.01 / IDENTITY</div>
-          <h3>M365 &amp;<br>Identidade</h3>
-          <p>Exchange, SharePoint, Teams, OneDrive, Entra ID, Conditional Access e Hybrid Identity. Governança de acesso corporativo com rigor.</p>
-          <div class="tags"><span>Entra ID</span><span>Conditional Access</span><span>Hybrid</span><span>MFA</span></div>
+          <div class="idx">P.01 / HOSPEDAGEM</div>
+          <h3>E-mail da<br>hospedagem</h3>
+          <p>Locaweb, KingHost, HostGator, cPanel, o e-mail que veio junto com o site ou um Exchange antigo. Caixa pequena, sem calendário compartilhado, spam demais. Copiamos o histórico por IMAP e trocamos o DNS na virada.</p>
+          <div class="tags"><span>IMAP</span><span>cPanel</span><span>Webmail</span><span>DNS</span></div>
         </article>
         <article class="pillar">
-          <div class="idx">P.02 / AUTOMATION</div>
-          <h3>Automação<br>PowerShell</h3>
-          <p>Scripts customizados, operações em massa, integração entre sistemas. Menos trabalho manual, menos risco humano, mais consistência.</p>
-          <div class="tags"><span>Scripts</span><span>Bulk ops</span><span>Orquestração</span><span>Integrações</span></div>
+          <div class="idx">P.02 / ARQUIVOS</div>
+          <h3>Arquivos<br>na nuvem</h3>
+          <p>A pasta do escritório que hoje mora num servidor, num HD externo ou no computador de alguém vai para o SharePoint e o OneDrive. Abre do celular, não some se o computador quebrar e volta para a versão de ontem se alguém apagar sem querer.</p>
+          <div class="tags"><span>SharePoint</span><span>OneDrive</span><span>Teams</span><span>Versões</span></div>
         </article>
         <article class="pillar">
-          <div class="idx">P.03 / INFRA</div>
-          <h3>Infra &amp;<br>Nuvem</h3>
-          <p>Windows Server, DNS, DHCP, redes e Azure. Arquitetura resiliente, bem documentada, operação previsível.</p>
-          <div class="tags"><span>Azure</span><span>Windows Server</span><span>Mikrotik</span><span>Firewall</span></div>
+          <div class="idx">P.03 / TENANT</div>
+          <h3>Outro<br>Microsoft 365</h3>
+          <p>Troca de tenant: fusão, separação de empresas ou a revenda antiga que sumiu com a senha de administrador. Caixas, arquivos e domínio passam para uma conta que é sua.</p>
+          <div class="tags"><span>Tenant a tenant</span><span>Domínio</span><span>Licenças</span></div>
         </article>
       </div>
     </section>
 
     <section class="sec" id="about">
       <div class="sec-head rv">
-        <div class="sec-num">§02 — Ficha técnica</div>
+        <div class="sec-num">§02 — Como funciona</div>
         <div>
-          <h2>O casco<br>protege.<br><span class="u">A gente chega.</span></h2>
-          <p class="sec-lead">Tecnologia séria não precisa ser complicada para ser de ponta. Nossa prática é sobre engenharia calma e operação previsível.</p>
+          <h2>Combinado<br>antes.<br><span class="u">Virada fora do expediente.</span></h2>
+          <p class="sec-lead">Sem surpresa no meio do caminho: você sabe o preço, o dia da virada e o que muda para cada pessoa antes de qualquer coisa ser mexida.</p>
         </div>
       </div>
       <div class="spec rv">
         <div class="spec-left">
-          <h3>Engenharia<br><span class="big">calma.</span>Operação<br>previsível.</h3>
-          <p>Consultoria independente, sediada em Porto Alegre e atendendo clientes remotamente em todo o país. Quem fecha o diagnóstico é quem executa a solução — sem camada de triagem no meio.</p>
+          <h3>Contato<br><span class="big">direto.</span>Do início<br>ao fim.</h3>
+          <p>Mais de 15 anos cuidando de e-mail, servidores e arquivos de escritórios. Hoje a Casco Digital se dedica a uma coisa: levar o seu escritório para o Microsoft 365. Quem faz o levantamento é quem executa a migração, do primeiro contato à entrega.</p>
           <div class="spec-mascot">
             <img src="assets/turtle-hero.webp" alt="Mascote Casco Digital" loading="lazy">
             <div class="m-txt">
               <b>// Mascote</b>
-              Tartaruga-de-óculos.<br>Calma, blindada e<br>sempre chega onde<br>precisa chegar.
+              Devagar no plano,<br>rápida na virada.
             </div>
           </div>
         </div>
         <div class="spec-right">
-          <div class="spec-row"><div class="k">01</div><div><h4>Simplicidade</h4><p>Soluções claras e manuteníveis por quem vier depois. Código e arquitetura que qualquer técnico consegue dar sequência.</p></div></div>
-          <div class="spec-row"><div class="k">02</div><div><h4>Profundidade real</h4><p>Microsoft 365, Entra ID, Azure e infraestrutura on-prem no dia a dia — não em slide. Formação continuada em identidade e segurança (trilha SC-300).</p></div></div>
-          <div class="spec-row"><div class="k">03</div><div><h4>Automação inteligente</h4><p>PowerShell para cortar esforço repetitivo e reduzir erro humano em escala.</p></div></div>
-          <div class="spec-row"><div class="k">04</div><div><h4>Canal direto</h4><p>Incidente crítico não passa por fila nem por script de atendimento: você fala direto com o técnico sênior que conhece o seu ambiente.</p></div></div>
-          <div class="spec-row"><div class="k">05</div><div><h4>Cloud-first</h4><p>Arquitetura orientada ao futuro, mantendo compatibilidade com o que o cliente já opera hoje.</p></div></div>
+          <div class="spec-row"><div class="k">01</div><div><h4>Levantamento</h4><p>Quantas caixas de e-mail, onde estão os arquivos e quanto ocupam, quem usa celular, quem usa Outlook. Uma conversa de 30 minutos e acesso ao painel atual.</p></div></div>
+          <div class="spec-row"><div class="k">02</div><div><h4>Orçamento fechado</h4><p>Preço por caixa de e-mail e por volume de arquivos, data da virada e lista do que está incluso. As licenças do Microsoft 365 são pagas por você direto à Microsoft. Ajudamos a escolher o plano certo para não pagar a mais.</p></div></div>
+          <div class="spec-row"><div class="k">03</div><div><h4>Cópia e virada</h4><p>E-mails e arquivos são copiados com antecedência, enquanto todos seguem trabalhando como sempre. Na sexta à noite o DNS é trocado e o que chegou por último é sincronizado. Na segunda, o e-mail já está no 365.</p></div></div>
+          <div class="spec-row"><div class="k">04</div><div><h4>Ajustes por 7 dias</h4><p>Uma semana de acompanhamento por WhatsApp para o que aparecer: celular pedindo senha, assinatura, regra de e-mail, impressora que digitaliza para e-mail.</p></div></div>
+          <div class="spec-row"><div class="k">05</div><div><h4>Segurança de saída</h4><p>Toda migração termina com autenticação em dois fatores e o domínio protegido contra e-mail falso (SPF, DKIM e DMARC).</p></div></div>
         </div>
       </div>
     </section>
 
     <section class="sec" id="services">
       <div class="sec-head rv">
-        <div class="sec-num">§03 — Serviços</div>
+        <div class="sec-num">§03 — O que inclui</div>
         <div>
-          <h2>O que<br><span class="u">entregamos.</span></h2>
-          <p class="sec-lead">Pacotes modulares. Projetos fechados ou alocação contínua como extensão do seu time de TI.</p>
+          <h2>O que está<br><span class="u">no pacote.</span></h2>
+          <p class="sec-lead">Tudo o que costuma dar problema depois de uma migração já entra no preço, e o escopo fica escrito no orçamento antes de começar.</p>
         </div>
       </div>
       <div class="services-table rv">
-        <div class="srv-row" tabindex="0" data-srv="Administração M365 (Exchange, SharePoint, Teams, OneDrive)"><div class="srv-num">/01</div><div class="srv-title">Administração M365</div><div class="srv-desc">Exchange, SharePoint, Teams, OneDrive — configuração, migração e operação contínua.</div><div class="srv-arrow">↗</div></div>
-        <div class="srv-row" tabindex="0" data-srv="Entra ID e Identidade (Conditional Access, Hybrid Identity, MFA)"><div class="srv-num">/02</div><div class="srv-title">Entra ID &amp; Identidade</div><div class="srv-desc">Conditional Access, Hybrid Identity, MFA, governança de acesso corporativo.</div><div class="srv-arrow">↗</div></div>
-        <div class="srv-row" tabindex="0" data-srv="Automação PowerShell (scripts, onboarding/offboarding, integrações)"><div class="srv-num">/03</div><div class="srv-title">Automação PowerShell</div><div class="srv-desc">Scripts sob medida, automação de onboarding/offboarding, integrações.</div><div class="srv-arrow">↗</div></div>
-        <div class="srv-row" tabindex="0" data-srv="Infra e Redes (Windows Server, AD, DNS, DHCP, Mikrotik, firewall)"><div class="srv-num">/04</div><div class="srv-title">Infra &amp; Redes</div><div class="srv-desc">Windows Server, AD, DNS, DHCP, Mikrotik, firewall. Arquitetura bem documentada.</div><div class="srv-arrow">↗</div></div>
-        <div class="srv-row" tabindex="0" data-srv="Consultoria estratégica (planejamento, roadmap de modernização)"><div class="srv-num">/05</div><div class="srv-title">Consultoria estratégica</div><div class="srv-desc">Planejamento, roadmap de modernização, assessoria executiva.</div><div class="srv-arrow">↗</div></div>
+        <div class="srv-row" tabindex="0" data-srv="Migração de e-mail e histórico"><div class="srv-num">/01</div><div class="srv-title">E-mail e histórico</div><div class="srv-desc">Todas as pastas e mensagens antigas, com os mesmos endereços. Ninguém troca de e-mail.</div><div class="srv-arrow">↗</div></div>
+        <div class="srv-row" tabindex="0" data-srv="Migração de agenda e contatos"><div class="srv-num">/02</div><div class="srv-title">Agenda e contatos</div><div class="srv-desc">Calendários, compromissos recorrentes e contatos, quando a origem permite exportar.</div><div class="srv-arrow">↗</div></div>
+        <div class="srv-row" tabindex="0" data-srv="Configuração de Outlook e celulares"><div class="srv-num">/03</div><div class="srv-title">Computadores e celulares</div><div class="srv-desc">Outlook, celular e webmail configurados para cada pessoa, com um guia de uma página.</div><div class="srv-arrow">↗</div></div>
+        <div class="srv-row" tabindex="0" data-srv="Migração de arquivos para SharePoint e OneDrive"><div class="srv-num">/04</div><div class="srv-title">Pastas no SharePoint</div><div class="srv-desc">A estrutura de pastas do escritório recriada no SharePoint, com quem pode ver o quê, sincronizada no computador como se fosse uma pasta comum.</div><div class="srv-arrow">↗</div></div>
+        <div class="srv-row" tabindex="0" data-srv="Segurança de e-mail (MFA, SPF, DKIM, DMARC)"><div class="srv-num">/05</div><div class="srv-title">Domínio protegido</div><div class="srv-desc">MFA para todos, SPF, DKIM e DMARC configurados. Menos spam e ninguém mandando e-mail falso em seu nome.</div><div class="srv-arrow">↗</div></div>
       </div>
 
       <div class="feat-banner rv">
-        <div class="feat-stamp">Grátis<br>/→<small>Ferramenta · online</small></div>
+        <div class="feat-stamp">Sua<br>/→<small>a conta</small></div>
         <div class="txt">
-          <h4>Diagnóstico rápido de TI</h4>
-          <p>Avalie em minutos se sua empresa está exposta a fraudes de e-mail ou se os computadores estão segurando a produtividade do time. Relatório objetivo, sem cadastro obrigatório.</p>
+          <h4>No fim, tudo fica com você</h4>
+          <p>A conta do Microsoft 365 é registrada no nome da sua empresa, com a senha de administrador na sua mão e um documento de entrega explicando o que foi feito. Projeto com começo, meio e fim: sem mensalidade e sem depender da Casco para continuar.</p>
         </div>
-        <a class="action" href="/diagnostico">Acessar →</a>
+        <a class="action" href="/diagnostico">Testar meu domínio →</a>
       </div>
     </section>
 
     <section class="sec" id="stack">
       <div class="sec-head rv">
-        <div class="sec-num">§04 — Stack</div>
+        <div class="sec-num">§04 — Perguntas</div>
         <div>
-          <h2>Tecnologias<br><span class="u">dominadas.</span></h2>
-          <p class="sec-lead">Stack focada em Microsoft, automação e redes. Profundidade em vez de amplitude.</p>
+          <h2>Antes de<br><span class="u">perguntar.</span></h2>
+          <p class="sec-lead">As dúvidas que todo escritório tem antes de migrar.</p>
         </div>
       </div>
-      <div class="stack-grid rv">
-        <div class="stack-cell"><span class="name">Microsoft 365</span><span class="tag">cloud</span></div>
-        <div class="stack-cell"><span class="name">Azure</span><span class="tag">cloud</span></div>
-        <div class="stack-cell"><span class="name">Entra ID</span><span class="tag">identity</span></div>
-        <div class="stack-cell"><span class="name">Exchange</span><span class="tag">mail</span></div>
-        <div class="stack-cell"><span class="name">SharePoint</span><span class="tag">collab</span></div>
-        <div class="stack-cell"><span class="name">Teams</span><span class="tag">collab</span></div>
-        <div class="stack-cell"><span class="name">OneDrive</span><span class="tag">storage</span></div>
-        <div class="stack-cell"><span class="name">PowerShell</span><span class="tag">automation</span></div>
-        <div class="stack-cell"><span class="name">Win Server</span><span class="tag">infra</span></div>
-        <div class="stack-cell"><span class="name">Active Dir.</span><span class="tag">identity</span></div>
-        <div class="stack-cell"><span class="name">DNS / DHCP</span><span class="tag">net</span></div>
-        <div class="stack-cell"><span class="name">Mikrotik</span><span class="tag">net</span></div>
-        <div class="stack-cell"><span class="name">Firewall</span><span class="tag">sec</span></div>
-        <div class="stack-cell"><span class="name">MFA / SSO</span><span class="tag">sec</span></div>
-        <div class="stack-cell"><span class="name">Cond. Access</span><span class="tag">sec</span></div>
-        <div class="stack-cell"><span class="name">Intune</span><span class="tag">endpoint</span></div>
+      <div class="spec rv" style="grid-template-columns: 1fr;">
+        <div class="spec-right">
+          <div class="spec-row"><div class="k">?</div><div><h4>Vou perder e-mails antigos?</h4><p>Não. O histórico é copiado antes da virada e conferido caixa por caixa. Nada é apagado da origem até você confirmar que está tudo no 365.</p></div></div>
+          <div class="spec-row"><div class="k">?</div><div><h4>O escritório fica sem e-mail durante a migração?</h4><p>Não. Todos trabalham normalmente até a virada, que acontece à noite ou no fim de semana. O que chegar nesse intervalo é sincronizado depois.</p></div></div>
+          <div class="spec-row"><div class="k">?</div><div><h4>Para que serve o SharePoint, na prática?</h4><p>Para o escritório ter uma pasta só, igual para todo mundo, que abre no computador, no celular e de casa. Se um computador queimar, nada se perde. Se alguém apagar ou estragar um arquivo, dá para voltar à versão anterior. E dá para mandar um documento a um cliente por link, sem anexo pesado.</p></div></div>
+          <div class="spec-row"><div class="k">?</div><div><h4>Quanto custa?</h4><p>Depende do número de caixas de e-mail e do volume de arquivos. O preço é fechado e informado antes de começar, sem cobrança por hora durante o projeto.</p></div></div>
+          <div class="spec-row"><div class="k">?</div><div><h4>Preciso comprar as licenças com vocês?</h4><p>Não. A assinatura do Microsoft 365 fica no nome da sua empresa e é paga direto à Microsoft. A conta é sua, não da Casco.</p></div></div>
+          <div class="spec-row"><div class="k">?</div><div><h4>E depois dos 7 dias?</h4><p>O ambiente fica documentado e no seu nome, então qualquer técnico consegue dar sequência. Se aparecer algo novo, combinamos um ajuste pontual à parte.</p></div></div>
+        </div>
       </div>
     </section>
 
@@ -568,7 +576,7 @@
         <div class="sec-num">§05 — Contato</div>
         <div>
           <h2>Vamos<br><span class="u">conversar.</span></h2>
-          <p class="sec-lead">Desafio específico no seu ambiente Microsoft, infra ou identidade? Escreva. A gente responde rápido.</p>
+          <p class="sec-lead">Conte quantas pessoas usam e-mail e onde ele está hoje. A resposta vem com os próximos passos e, se fizer sentido, um orçamento.</p>
         </div>
       </div>
 
@@ -591,13 +599,13 @@
 
         <form class="card" id="contactForm">
           <h3>Envie uma mensagem</h3>
-          <div class="sub">— Resposta em até 24h úteis</div>
+          <div class="sub">— Resposta em até 1 dia útil</div>
           <div class="two">
             <div class="field"><label for="f-name">Nome</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
             <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
           </div>
           <div class="field"><label for="f-phone">Telefone / WhatsApp <span style="opacity:.55">(opcional)</span></label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
-          <div class="field"><label for="f-msg">Mensagem</label><textarea id="f-msg" name="message" required placeholder="Conte o que você precisa resolver."></textarea></div>
+          <div class="field"><label for="f-msg">Mensagem</label><textarea id="f-msg" name="message" required placeholder="Ex.: somos 8 pessoas, e-mail na Locaweb, queremos ir para o 365."></textarea></div>
           <button class="submit" type="submit">→ Enviar mensagem</button>
           <div class="form-msg" id="formMsg"></div>
         </form>
@@ -617,7 +625,7 @@
   </main>
 </div>
 
-<a class="wa" href="https://wa.me/5551992413388?text=Ol%C3%A1%20Casco%20Digital%2C%20gostaria%20de%20uma%20consulta" target="_blank" rel="noopener" aria-label="WhatsApp">
+<a class="wa" data-cta="botao_flutuante" href="https://wa.me/5551992413388?text=Ol%C3%A1%20Casco%20Digital%2C%20gostaria%20de%20uma%20consulta" target="_blank" rel="noopener" aria-label="WhatsApp">
   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 14.3c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.4.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1.1 1-1.1 2.5s1.1 2.9 1.3 3.1c.2.2 2.2 3.3 5.3 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.1-1.3c1.4.8 3.1 1.2 4.9 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.2-.4-4.5-1.2l-.3-.2-3 .8.8-2.9-.2-.3c-.9-1.4-1.3-3-1.3-4.6 0-4.6 3.7-8.3 8.3-8.3 4.6 0 8.3 3.7 8.3 8.3s-3.5 8.4-8.1 8.4z"/></svg>
 </a>
 
@@ -675,6 +683,7 @@
   document.querySelectorAll('.srv-row[data-srv]').forEach(row => {
     const open = () => {
       const txt = `Olá Casco Digital! Tenho interesse no serviço de ${row.dataset.srv}. Podemos conversar?`;
+      window.cascoTrack('whatsapp_click', { cta_location: 'servico', servico: row.dataset.srv });
       window.open(`https://wa.me/5551992413388?text=${encodeURIComponent(txt)}`, '_blank', 'noopener');
     };
     row.addEventListener('click', open);
@@ -688,6 +697,7 @@
     e.preventDefault();
     const { name, email, phone, message } = Object.fromEntries(new FormData(form));
     const txt = `Olá Casco Digital!\nNome: ${name}\nEmail: ${email}${phone ? `\nTelefone: ${phone}` : ''}\n\n${message}`;
+    window.cascoTrack('generate_lead', { form_name: 'contato' });
     window.open(`https://wa.me/5551992413388?text=${encodeURIComponent(txt)}`, '_blank', 'noopener');
     msg.className = 'form-msg ok'; msg.textContent = '✓ redirecionando para WhatsApp…';
     form.reset();

@@ -1,0 +1,623 @@
+{
+ "exportFormatVersion": 2,
+ "exportTime": "2026-10-10 14:00:00",
+ "containerVersion": {
+  "path": "accounts/6381767612/containers/266730058/versions/0",
+  "accountId": "6381767612",
+  "containerId": "266730058",
+  "containerVersionId": "0",
+  "container": {
+   "path": "accounts/6381767612/containers/266730058",
+   "accountId": "6381767612",
+   "containerId": "266730058",
+   "name": "cascodigital.com.br",
+   "publicId": "GTM-PDG8MNZW",
+   "usageContext": [
+    "WEB"
+   ],
+   "fingerprint": "0",
+   "tagManagerUrl": ""
+  },
+  "tag": [
+   {
+    "tagId": "1",
+    "name": "Google tag - GA4",
+    "type": "googtag",
+    "parameter": [
+     {
+      "type": "TEMPLATE",
+      "key": "tagId",
+      "value": "G-FKYP5RLRKT"
+     }
+    ],
+    "firingTriggerId": [
+     "2147479553"
+    ],
+    "tagFiringOption": "ONCE_PER_EVENT",
+    "accountId": "6381767612",
+    "containerId": "266730058",
+    "fingerprint": "0"
+   },
+   {
+    "tagId": "2",
+    "name": "GA4 - whatsapp_click",
+    "type": "gaawe",
+    "parameter": [
+     {
+      "type": "BOOLEAN",
+      "key": "sendEcommerceData",
+      "value": "false"
+     },
+     {
+      "type": "TEMPLATE",
+      "key": "eventName",
+      "value": "whatsapp_click"
+     },
+     {
+      "type": "TEMPLATE",
+      "key": "measurementIdOverride",
+      "value": "G-FKYP5RLRKT"
+     },
+     {
+      "type": "LIST",
+      "key": "eventSettingsTable",
+      "list": [
+       {
+        "type": "MAP",
+        "map": [
+         {
+          "type": "TEMPLATE",
+          "key": "parameter",
+          "value": "cta_location"
+         },
+         {
+          "type": "TEMPLATE",
+          "key": "parameterValue",
+          "value": "{{DLV - cta_location}}"
+         }
+        ]
+       },
+       {
+        "type": "MAP",
+        "map": [
+         {
+          "type": "TEMPLATE",
+          "key": "parameter",
+          "value": "servico"
+         },
+         {
+          "type": "TEMPLATE",
+          "key": "parameterValue",
+          "value": "{{DLV - servico}}"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "firingTriggerId": [
+     "10"
+    ],
+    "tagFiringOption": "ONCE_PER_EVENT",
+    "accountId": "6381767612",
+    "containerId": "266730058",
+    "fingerprint": "0"
+   },
+   {
+    "tagId": "3",
+    "name": "GA4 - generate_lead",
+    "type": "gaawe",
+    "parameter": [
+     {
+      "type": "BOOLEAN",
+      "key": "sendEcommerceData",
+      "value": "false"
+     },
+     {
+      "type": "TEMPLATE",
+      "key": "eventName",
+      "value": "generate_lead"
+     },
+     {
+      "type": "TEMPLATE",
+      "key": "measurementIdOverride",
+      "value": "G-FKYP5RLRKT"
+     },
+     {
+      "type": "LIST",
+      "key": "eventSettingsTable",
+      "list": [
+       {
+        "type": "MAP",
+        "map": [
+         {
+          "type": "TEMPLATE",
+          "key": "parameter",
+          "value": "form_name"
+         },
+         {
+          "type": "TEMPLATE",
+          "key": "parameterValue",
+          "value": "{{DLV - form_name}}"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "firingTriggerId": [
+     "11"
+    ],
+    "tagFiringOption": "ONCE_PER_EVENT",
+    "accountId": "6381767612",
+    "containerId": "266730058",
+    "fingerprint": "0"
+   },
+   {
+    "tagId": "4",
+    "name": "GA4 - agent_download",
+    "type": "gaawe",
+    "parameter": [
+     {
+      "type": "BOOLEAN",
+      "key": "sendEcommerceData",
+      "value": "false"
+     },
+     {
+      "type": "TEMPLATE",
+      "key": "eventName",
+      "value": "agent_download"
+     },
+     {
+      "type": "TEMPLATE",
+      "key": "measurementIdOverride",
+      "value": "G-FKYP5RLRKT"
+     },
+     {
+      "type": "LIST",
+      "key": "eventSettingsTable",
+      "list": [
+       {
+        "type": "MAP",
+        "map": [
+         {
+          "type": "TEMPLATE",
+          "key": "parameter",
+          "value": "cta_location"
+         },
+         {
+          "type": "TEMPLATE",
+          "key": "parameterValue",
+          "value": "{{DLV - cta_location}}"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "firingTriggerId": [
+     "12"
+    ],
+    "tagFiringOption": "ONCE_PER_EVENT",
+    "accountId": "6381767612",
+    "containerId": "266730058",
+    "fingerprint": "0"
+   },
+   {
+    "tagId": "5",
+    "name": "GA4 - tool_used",
+    "type": "gaawe",
+    "parameter": [
+     {
+      "type": "BOOLEAN",
+      "key": "sendEcommerceData",
+      "value": "false"
+     },
+     {
+      "type": "TEMPLATE",
+      "key": "eventName",
+      "value": "tool_used"
+     },
+     {
+      "type": "TEMPLATE",
+      "key": "measurementIdOverride",
+      "value": "G-FKYP5RLRKT"
+     },
+     {
+      "type": "LIST",
+      "key": "eventSettingsTable",
+      "list": [
+       {
+        "type": "MAP",
+        "map": [
+         {
+          "type": "TEMPLATE",
+          "key": "parameter",
+          "value": "tool_name"
+         },
+         {
+          "type": "TEMPLATE",
+          "key": "parameterValue",
+          "value": "{{DLV - tool_name}}"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "firingTriggerId": [
+     "13"
+    ],
+    "tagFiringOption": "ONCE_PER_EVENT",
+    "accountId": "6381767612",
+    "containerId": "266730058",
+    "fingerprint": "0"
+   },
+   {
+    "accountId": "6381767612",
+    "containerId": "266730058",
+    "fingerprint": "0",
+    "tagId": "6",
+    "name": "Ads - Vinculador de conversoes",
+    "type": "gclidw",
+    "parameter": [
+     {
+      "type": "BOOLEAN",
+      "key": "enableCrossDomain",
+      "value": "false"
+     },
+     {
+      "type": "BOOLEAN",
+      "key": "enableUrlPassthrough",
+      "value": "false"
+     },
+     {
+      "type": "BOOLEAN",
+      "key": "enableCookieOverrides",
+      "value": "false"
+     }
+    ],
+    "firingTriggerId": [
+     "2147479553"
+    ],
+    "tagFiringOption": "ONCE_PER_EVENT"
+   },
+   {
+    "accountId": "6381767612",
+    "containerId": "266730058",
+    "fingerprint": "0",
+    "tagId": "7",
+    "name": "Ads - Conversao WhatsApp",
+    "type": "awct",
+    "parameter": [
+     {
+      "type": "BOOLEAN",
+      "key": "enableNewCustomerReporting",
+      "value": "false"
+     },
+     {
+      "type": "BOOLEAN",
+      "key": "enableConversionLinker",
+      "value": "true"
+     },
+     {
+      "type": "BOOLEAN",
+      "key": "enableProductReporting",
+      "value": "false"
+     },
+     {
+      "type": "BOOLEAN",
+      "key": "enableEnhancedConversion",
+      "value": "false"
+     },
+     {
+      "type": "BOOLEAN",
+      "key": "enableShippingData",
+      "value": "false"
+     },
+     {
+      "type": "TEMPLATE",
+      "key": "conversionId",
+      "value": "18505668861"
+     },
+     {
+      "type": "TEMPLATE",
+      "key": "conversionLabel",
+      "value": "BnP_CJ7jlZgdEP2xmPhE"
+     },
+     {
+      "type": "TEMPLATE",
+      "key": "conversionCookiePrefix",
+      "value": "_gcl"
+     },
+     {
+      "type": "BOOLEAN",
+      "key": "rdp",
+      "value": "false"
+     }
+    ],
+    "firingTriggerId": [
+     "10"
+    ],
+    "tagFiringOption": "ONCE_PER_EVENT"
+   },
+   {
+    "accountId": "6381767612",
+    "containerId": "266730058",
+    "fingerprint": "0",
+    "tagId": "8",
+    "name": "Ads - Conversao Formulario",
+    "type": "awct",
+    "parameter": [
+     {
+      "type": "BOOLEAN",
+      "key": "enableNewCustomerReporting",
+      "value": "false"
+     },
+     {
+      "type": "BOOLEAN",
+      "key": "enableConversionLinker",
+      "value": "true"
+     },
+     {
+      "type": "BOOLEAN",
+      "key": "enableProductReporting",
+      "value": "false"
+     },
+     {
+      "type": "BOOLEAN",
+      "key": "enableEnhancedConversion",
+      "value": "false"
+     },
+     {
+      "type": "BOOLEAN",
+      "key": "enableShippingData",
+      "value": "false"
+     },
+     {
+      "type": "TEMPLATE",
+      "key": "conversionId",
+      "value": "18505668861"
+     },
+     {
+      "type": "TEMPLATE",
+      "key": "conversionLabel",
+      "value": "Bc4qCO2znpgdEP2xmPhE"
+     },
+     {
+      "type": "TEMPLATE",
+      "key": "conversionCookiePrefix",
+      "value": "_gcl"
+     },
+     {
+      "type": "BOOLEAN",
+      "key": "rdp",
+      "value": "false"
+     }
+    ],
+    "firingTriggerId": [
+     "11"
+    ],
+    "tagFiringOption": "ONCE_PER_EVENT"
+   }
+  ],
+  "trigger": [
+   {
+    "triggerId": "10",
+    "name": "CE - whatsapp_click",
+    "type": "CUSTOM_EVENT",
+    "customEventFilter": [
+     {
+      "type": "EQUALS",
+      "parameter": [
+       {
+        "type": "TEMPLATE",
+        "key": "arg0",
+        "value": "{{_event}}"
+       },
+       {
+        "type": "TEMPLATE",
+        "key": "arg1",
+        "value": "whatsapp_click"
+       }
+      ]
+     }
+    ],
+    "accountId": "6381767612",
+    "containerId": "266730058",
+    "fingerprint": "0"
+   },
+   {
+    "triggerId": "11",
+    "name": "CE - generate_lead",
+    "type": "CUSTOM_EVENT",
+    "customEventFilter": [
+     {
+      "type": "EQUALS",
+      "parameter": [
+       {
+        "type": "TEMPLATE",
+        "key": "arg0",
+        "value": "{{_event}}"
+       },
+       {
+        "type": "TEMPLATE",
+        "key": "arg1",
+        "value": "generate_lead"
+       }
+      ]
+     }
+    ],
+    "accountId": "6381767612",
+    "containerId": "266730058",
+    "fingerprint": "0"
+   },
+   {
+    "triggerId": "12",
+    "name": "CE - agent_download",
+    "type": "CUSTOM_EVENT",
+    "customEventFilter": [
+     {
+      "type": "EQUALS",
+      "parameter": [
+       {
+        "type": "TEMPLATE",
+        "key": "arg0",
+        "value": "{{_event}}"
+       },
+       {
+        "type": "TEMPLATE",
+        "key": "arg1",
+        "value": "agent_download"
+       }
+      ]
+     }
+    ],
+    "accountId": "6381767612",
+    "containerId": "266730058",
+    "fingerprint": "0"
+   },
+   {
+    "triggerId": "13",
+    "name": "CE - tool_used",
+    "type": "CUSTOM_EVENT",
+    "customEventFilter": [
+     {
+      "type": "EQUALS",
+      "parameter": [
+       {
+        "type": "TEMPLATE",
+        "key": "arg0",
+        "value": "{{_event}}"
+       },
+       {
+        "type": "TEMPLATE",
+        "key": "arg1",
+        "value": "tool_used"
+       }
+      ]
+     }
+    ],
+    "accountId": "6381767612",
+    "containerId": "266730058",
+    "fingerprint": "0"
+   }
+  ],
+  "variable": [
+   {
+    "variableId": "20",
+    "name": "DLV - cta_location",
+    "type": "v",
+    "parameter": [
+     {
+      "type": "INTEGER",
+      "key": "dataLayerVersion",
+      "value": "2"
+     },
+     {
+      "type": "BOOLEAN",
+      "key": "setDefaultValue",
+      "value": "false"
+     },
+     {
+      "type": "TEMPLATE",
+      "key": "name",
+      "value": "cta_location"
+     }
+    ],
+    "accountId": "6381767612",
+    "containerId": "266730058",
+    "fingerprint": "0"
+   },
+   {
+    "variableId": "21",
+    "name": "DLV - form_name",
+    "type": "v",
+    "parameter": [
+     {
+      "type": "INTEGER",
+      "key": "dataLayerVersion",
+      "value": "2"
+     },
+     {
+      "type": "BOOLEAN",
+      "key": "setDefaultValue",
+      "value": "false"
+     },
+     {
+      "type": "TEMPLATE",
+      "key": "name",
+      "value": "form_name"
+     }
+    ],
+    "accountId": "6381767612",
+    "containerId": "266730058",
+    "fingerprint": "0"
+   },
+   {
+    "variableId": "22",
+    "name": "DLV - servico",
+    "type": "v",
+    "parameter": [
+     {
+      "type": "INTEGER",
+      "key": "dataLayerVersion",
+      "value": "2"
+     },
+     {
+      "type": "BOOLEAN",
+      "key": "setDefaultValue",
+      "value": "false"
+     },
+     {
+      "type": "TEMPLATE",
+      "key": "name",
+      "value": "servico"
+     }
+    ],
+    "accountId": "6381767612",
+    "containerId": "266730058",
+    "fingerprint": "0"
+   },
+   {
+    "variableId": "23",
+    "name": "DLV - tool_name",
+    "type": "v",
+    "parameter": [
+     {
+      "type": "INTEGER",
+      "key": "dataLayerVersion",
+      "value": "2"
+     },
+     {
+      "type": "BOOLEAN",
+      "key": "setDefaultValue",
+      "value": "false"
+     },
+     {
+      "type": "TEMPLATE",
+      "key": "name",
+      "value": "tool_name"
+     }
+    ],
+    "accountId": "6381767612",
+    "containerId": "266730058",
+    "fingerprint": "0"
+   }
+  ],
+  "builtInVariable": [
+   {
+    "accountId": "6381767612",
+    "containerId": "266730058",
+    "type": "EVENT",
+    "name": "Event"
+   },
+   {
+    "accountId": "6381767612",
+    "containerId": "266730058",
+    "type": "PAGE_URL",
+    "name": "Page URL"
+   }
+  ]
+ }
+}

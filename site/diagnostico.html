@@ -2,6 +2,13 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PDG8MNZW');</script>
+<!-- End Google Tag Manager -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Diagnóstico de TI gratuito — SPF/DMARC e desempenho de PC · Casco Digital</title>
 <meta name="description" content="Duas ferramentas gratuitas e sem cadastro: Guardian audita a proteção do seu domínio contra fraude de e-mail (SPF, DKIM, DMARC) e o PC Inspector mede se os computadores do escritório ainda dão conta do recado.">
@@ -230,8 +237,13 @@
     .how-tabs { flex-wrap: wrap; }
   }
 </style>
+<script src="/assets/track.js"></script>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PDG8MNZW"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <div class="frame">
   <aside class="rail" id="rail">
@@ -367,7 +379,7 @@
         <div class="cta-card">
           <h3>Proteja seu domínio agora.</h3>
           <p>A Casco Digital configura SPF, DMARC e MX com política <strong>p=reject</strong> — o padrão máximo. Elimine o risco em 24h.</p>
-          <a href="https://wa.me/5551992413388?text=Ol%C3%A1%2C%20fiz%20a%20auditoria%20no%20The%20Lab%20e%20gostaria%20de%20proteger%20meu%20dom%C3%ADnio." class="action" target="_blank">
+          <a data-cta="diagnostico_guardian" href="https://wa.me/5551992413388?text=Ol%C3%A1%2C%20fiz%20a%20auditoria%20no%20The%20Lab%20e%20gostaria%20de%20proteger%20meu%20dom%C3%ADnio." class="action" target="_blank">
             <span class="dot" style="background:var(--ink);"></span> Falar com Especialista
           </a>
         </div>
@@ -466,7 +478,7 @@
         <div class="cta-card" id="pcCtaCard">
           <h3 id="pcCtaTitle">Proteja sua Operação</h3>
           <p id="pcCtaText">A Casco Digital implanta e gerencia a infraestrutura ideal para que sua empresa foque no negócio, sem gargalos.</p>
-          <a id="pcCtaBtn" href="https://wa.me/5551992413388?text=Ol%C3%A1%2C%20fiz%20o%20diagn%C3%B3stico%20no%20The%20Lab%20e%20gostaria%20de%20falar%20sobre%20o%20meu%20PC." class="action" target="_blank">
+          <a id="pcCtaBtn" data-cta="diagnostico_pc" href="https://wa.me/5551992413388?text=Ol%C3%A1%2C%20fiz%20o%20diagn%C3%B3stico%20no%20The%20Lab%20e%20gostaria%20de%20falar%20sobre%20o%20meu%20PC." class="action" target="_blank">
             <span class="dot" style="background:var(--ink);"></span> Falar com Especialista
           </a>
         </div>
@@ -764,6 +776,7 @@ document.getElementById('auditForm').addEventListener('submit', (e) => {
     e.preventDefault();
     const domain = document.getElementById('domainInput').value.trim();
     if (!domain) return;
+    window.cascoTrack('tool_used', { tool_name: 'guardian' });
     runAudit(domain);
 });
 
@@ -1093,6 +1106,7 @@ async function runPCBenchmark() {
 
     document.getElementById('pcCtaTitle').textContent = ctaTitle;
     document.getElementById('pcCtaText').textContent = ctaText;
+    window.cascoTrack('tool_used', { tool_name: 'pc_inspector' });
     document.getElementById('pcCtaBtn').href = `https://wa.me/5551992413388?text=${ctaMsg}`;
 
     document.getElementById('pcResults').classList.add('visible');
