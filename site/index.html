@@ -143,7 +143,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   .hero { position: relative; min-height: 100vh; padding: 64px 56px 56px; border-bottom: 1px solid var(--line); display: grid; grid-template-rows: auto 1fr auto; gap: 40px; }
   .hero-stage { position: relative; }
-  .hero-portrait { position: absolute; top: 50%; right: 0; transform: translateY(-46%); width: clamp(240px, 26vw, 360px); aspect-ratio: 1/1; border: 1px solid var(--ink); background: var(--bg); overflow: hidden; z-index: 0; }
+  .hero-portrait { position: absolute; top: 50%; right: 0; transform: translateY(-46%); width: clamp(200px, 18vw, 360px); aspect-ratio: 1/1; border: 1px solid var(--ink); background: var(--bg); overflow: hidden; z-index: 0; }
   .hero-portrait img { width: 100%; height: 100%; object-fit: cover; filter: contrast(1.05) saturate(1.05); display: block; }
   .hero-portrait::before { content: ""; position: absolute; inset: 0; border: 1px solid var(--paper); pointer-events: none; z-index: 2; mix-blend-mode: normal; opacity: .3; }
   .hero-portrait::after { content: ""; position: absolute; top: 10px; left: 10px; right: -10px; bottom: -10px; border: 1px solid var(--ink); z-index: -1; background: var(--paper); }
@@ -151,8 +151,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .hero-portrait .tag b { color: #ffb01c; font-weight: 600; }
   .hero-portrait .ticks { position: absolute; top: 8px; left: 8px; right: 8px; display: flex; justify-content: space-between; font-family: var(--f-mono); font-size: 9px; color: var(--paper); opacity: .85; letter-spacing: .1em; z-index: 3; }
   .hero-type { position: relative; z-index: 1; }
-  @media (max-width: 1500px) { .hero-portrait { display: none; } }
-  @media (min-width: 1501px) { .hero-type { padding-right: calc(clamp(240px, 26vw, 360px) + 40px); } }
+  @media (max-width: 1150px) { .hero-portrait { display: none; } }
   .hero-meta { display: flex; justify-content: space-between; align-items: flex-start; font-family: var(--f-mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-60); }
   .hero-meta .l { display: flex; gap: 28px; flex-wrap: wrap; }
   .hero-meta .l span::before { content: "//"; color: var(--cyan-ink); margin-right: 6px; }
